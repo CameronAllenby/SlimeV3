@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class BlueSlime : MonoBehaviour
+public class boss : MonoBehaviour
 {
     SpriteRenderer sr;
     Hscript helper;
@@ -16,10 +16,11 @@ public class BlueSlime : MonoBehaviour
         //Projectile = OnTriggerEnter2D(, Projectile);
     }
     int speed = 7;
-    int Health = 10;
+    int Health = 1000;
     // Update is called once per frame
     void Update()
     {
+        print(Health);
         transform.position = new Vector2(transform.position.x + (speed * Time.deltaTime), transform.position.y);
         if (helper.Pacing() == 1)
         {
@@ -47,7 +48,7 @@ public class BlueSlime : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-       
+        
 
         
         
